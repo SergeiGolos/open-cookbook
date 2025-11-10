@@ -4,6 +4,25 @@
   "description": "Programmable context builder for Copilot Chat using Handlebars templates",
   "version": "0.0.1",
   "publisher": "open-cookbook",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergeiGolos/open-cookbook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SergeiGolos/open-cookbook/issues"
+  },
+  "homepage": "https://github.com/SergeiGolos/open-cookbook#readme",
+  "keywords": [
+    "copilot",
+    "chat",
+    "ai",
+    "templates",
+    "handlebars",
+    "cookbook",
+    "context",
+    "prompt"
+  ],
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -29,7 +48,9 @@
     "watch": "node esbuild.js --watch",
     "lint": "eslint src --ext ts",
     "pretest": "npm run build && npm run lint",
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "echo \"No tests yet\" && exit 0",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
