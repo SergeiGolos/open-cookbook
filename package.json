@@ -1,0 +1,46 @@
+{
+  "name": "open-cookbook",
+  "displayName": "Open Cookbook",
+  "description": "Programmable context builder for Copilot Chat using Handlebars templates",
+  "version": "0.0.1",
+  "publisher": "open-cookbook",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "chatParticipants": [
+      {
+        "id": "open-cookbook.cookbook",
+        "name": "cookbook",
+        "description": "Runs a cookbook template to generate context for Copilot",
+        "isSticky": true
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.js --production",
+    "watch": "node esbuild.js --watch",
+    "lint": "eslint src --ext ts",
+    "pretest": "npm run build && npm run lint",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}
